@@ -25,7 +25,7 @@ def test_generate_random():
     generate_random = k_ex.generate_random
 
     random_numero = generate_random(1, 100)
-    eq_(type(random_numero), int or long)
+    eq_(type(random_numero), int or int)
     ok_(random_numero >= 1 and random_numero <= 100)
 
 def test_prime_pick():
@@ -56,7 +56,7 @@ def test_make_public_key():
     public_key = make_public_key(prime, base, rnumber)
     manual_public_key = (base**rnumber)%prime
 
-    ok_(type(public_key) == int or type(public_key) == long)
+    ok_(type(public_key) == int or type(public_key) == int)
     eq_(public_key, manual_public_key)
 
 def test_make_final_key():
@@ -79,6 +79,6 @@ def test_make_final_key():
         keyA = make_final_key(p, B, a)
         keyB = make_final_key(p, A, b)
 
-        ok_(type(keyA) == int or type(keyA) == long)
-        ok_(type(keyB) == int or type(keyB) == long)
+        ok_(type(keyA) == int or type(keyA) == int)
+        ok_(type(keyB) == int or type(keyB) == int)
         eq_(keyA, keyB)

@@ -22,7 +22,7 @@ import cmd, sys, copy, base64
 import cryptoim.xmpp
 
 if sys.version_info < (3, 0):
-    import ConfigParser as configparser
+    import configparser as configparser
 else:
     import configparser as configparser
 
